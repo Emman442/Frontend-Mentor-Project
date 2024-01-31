@@ -55,7 +55,7 @@ function App() {
           >
             <MdOutlineNavigateBefore />
           </span>
-          <div className="w-[full%]">
+          <div className="">
             <img
               src={active === null ? imgArr[1] : imgArr[active]}
               className="central-image w-[400px] rounded-[9px] h-[55vh] mb-5"
