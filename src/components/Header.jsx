@@ -17,8 +17,8 @@ export default function Header({ cartQuantity, imgArr, active }) {
       {cartActive ? (
         <div className="fixed border-[1px] shadow-lg bg-white w-[350px] h-[230px] top-[60px] right-[30px] justify-center z-50 mobile-modal-2 rounded-lg">
           <div>
-            <div className="text-xl font-semibold  h-[60px] border-b-2 flex items-center w-full">
-              <p className="mx-4">Cart</p>
+            <div className="text-xl font-semibold  h-[70px] border-b-2 flex items-center w-full">
+              <p className="mx-4 h1">Cart</p>
             </div>
 
             <div className="flex gap-[13px] h-[100px] items-center justify-center">
@@ -55,9 +55,28 @@ export default function Header({ cartQuantity, imgArr, active }) {
 
             <h1 className=" header-text font-bold text-[38px]">Sneakers</h1>
           </div>
-          <nav className={`${mobileMenuActive ? "fixed inset-0 block w-full h-[100%] z-50" : ""}`}>
-            <span className=" absolute text-2xl right-0" onClick={()=>{setMobileMenuActive(!mobileMenuActive)}}>&times;</span>
-            <ul className={`flex ${mobileMenuActive ? "flex-col z-500 gap-3 bg-slate-400 h-[100%]" : "gap-[30px]"}`}>
+          <nav
+            className={`${
+              mobileMenuActive
+                ? " font-bold fixed inset-0 block w-[65%] h-[100%] z-50"
+                : ""
+            }`}
+          >
+            <span
+              className="nav-cancel absolute text-2xl pl-[40px] hidden text-[#252525] opacity-70 left-0"
+              onClick={() => {
+                setMobileMenuActive(!mobileMenuActive);
+              }}
+            >
+              &times;
+            </span>
+            <ul
+              className={`flex ${
+                mobileMenuActive
+                  ? "flex-col z-500 gap-3 bg-white h-[100%] pt-[70px] pl-[40px]"
+                  : "gap-[50px]"
+              }`}
+            >
               <li>Collections</li>
               <li>Men</li>
               <li>Women</li>

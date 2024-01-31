@@ -159,7 +159,7 @@ function App() {
                   </span>
                 </div>
                 <p className="line-through my-2 text-light-gray text-[20px] font-bold">
-                  250.00
+                  $250.00
                 </p>
               </div>
 

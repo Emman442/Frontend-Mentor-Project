@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
+.body{
+  font-family: 'Kumbh Sans', sans-serif;
+}
 
 .active {
   border: 3px solid hsl(26, 100%, 55%);
@@ -32,6 +36,10 @@
   color: hsl(220, 14%, 75%)
 }
 
+.h1{
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 700;
+}
 
 @media screen and (max-width: 768px) {
   .general-w {
@@ -69,7 +77,9 @@
     border-radius: 0;
     height: 35vh;
   }
-
+  .nav-cancel{
+    display: block;
+  }
   .width {
     width: 100%;
   }
@@ -155,4 +165,11 @@
   .menu-active {
     display: none;
   } */
+  .mobile-modal-2{
+    width: 95%;
+    margin: 0 auto;
+    height: 31vh;
+    inset: 0;
+    top: 90px;
+  }
 }
