@@ -1,15 +1,18 @@
-import React from 'react'
+import React from "react";
 import { PiShoppingCartLight } from "react-icons/pi";
-import Avatar from "../assets/images/image-avatar.png"
+import Avatar from "../assets/images/image-avatar.png";
+import { IoMenu } from "react-icons/io5";
 
-export default function Header({cartQuantity}) {
+export default function Header({ cartQuantity }) {
   return (
-    <header className="w-full border-b-2  h-[90px] flex  items-center justify-between">
+    <header className="w-full border-b-2  h-[80px] flex items-center justify-between">
       <div className="flex gap-[40px] items-center">
-        <div>
-          <h1 className="font-bold text-[38px]">Sneakers</h1>
+        <div className="flex justify-center items-center gap-[20px] pl-[20px]">
+            <IoMenu className="hidden"/>
+
+          <h1 className=" header-text font-bold text-[38px]">Sneakers</h1>
         </div>
-        <nav>
+        <nav className="">
           <ul className="flex gap-[15px]">
             <li>Collections</li>
             <li>Men</li>
@@ -19,10 +22,12 @@ export default function Header({cartQuantity}) {
           </ul>
         </nav>
       </div>
-      <div className="flex gap-[30px] items-center">
-        <div>
+      <div className="cart-account flex gap-[30px] items-center">
+        <div className="cart-div">
           <PiShoppingCartLight className="text-[25px] relative" />
-          <span className='absolute background-orange text-[10px] right-[200px] text-white font-bold flex justify-center items-center top-[26px]  w-[25px] h-[12.5px] rounded-[12.5px] '>{cartQuantity}</span>
+          <span className="cart absolute background-orange text-[10px] right-[200px] text-white font-bold flex justify-center items-center top-[26px]  w-[25px] h-[12.5px] rounded-[12.5px] ">
+            {cartQuantity}
+          </span>
         </div>
         <img
           src={Avatar}
