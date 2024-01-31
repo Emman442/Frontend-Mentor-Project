@@ -14,6 +14,7 @@ function App() {
   const [cartQuantity, setCartQuantity] = useState(0);
   const [active, setActive] = useState(null);
   const [zoomed, setZoomed] = useState(false);
+  
   const handleAdd = () => {
     setQuantity(quantity + 1);
   };
@@ -44,8 +45,10 @@ function App() {
   const handleImageNext = () => {
     setActive((prev) => (prev < 1 ? imgArr.length - 1 : prev - 1));
   };
+
   return (
     <>
+      
       {zoomed ? (
         <Modal isOpen={zoomed}>
           <span
@@ -94,7 +97,7 @@ function App() {
       )}
 
       <div className="general-w w-[80%] my-0 mx-auto">
-        <Header cartQuantity={cartQuantity} />
+        <Header cartQuantity={cartQuantity} imgArr={imgArr} active={active}/>
         <div className="w-[80%] flex gap-[30px] my-[5%] mx-auto body-width">
           {/* Picture divs */}
 
@@ -104,7 +107,7 @@ function App() {
               className="nav-btn nav-btn-1 hidden"
               onClick={handleImagePrev}
             >
-              <MdOutlineNavigateBefore/>
+              <MdOutlineNavigateBefore />
             </span>
             <img
               src={active === null ? imgArr[1] : imgArr[active]}
@@ -116,7 +119,7 @@ function App() {
               className="nav-btn nav-btn-2 hidden "
               onClick={handleImageNext}
             >
-              <MdOutlineNavigateNext/>
+              <MdOutlineNavigateNext />
             </span>
 
             <div className="looped flex items-center justify-between w-[320px]">
